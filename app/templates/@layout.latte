@@ -1,0 +1,59 @@
+{**
+ * My Application layout template.
+ *
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+	<title>{block title|striptags}sovaplus.cz{/block}</title>
+
+	<link rel="stylesheet" media="all" href="{$basePath}/css/main.css">
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	{block head}{/block}
+</head>
+
+<body>
+<div id="page">
+	<script> document.body.className+=' js' </script>
+
+	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+	<div id="header">Enter | Sovaplus.cz</div>	<!-- ./header -->
+
+	<div id="left-column">
+	<div id="leftmenu">
+		<ul>
+		 <li><a href="{$basePath}">Domů</a></li>
+		 <li><a href="{$basePath}/o-mne/">O mně</a></li>
+		 <li><a href="{$basePath}/piseme-prvni-aplikaci-v-nette/">Píšeme první aplikaci v Nette</a></li>
+		</ul> 
+		<p>Reference</p>
+		<ul>
+		 <li><a href="{$basePath}">Blog</a></li>
+		 <li><a href="{$basePath}">Aplikace na správu článků</a></li>
+		</ul>
+	</div>	<!-- ./leftmenu -->	
+	</div>	<!-- ./left-column -->
+
+	<div id="middle-page">
+	{include #content}
+	</div>	<!-- /middle-page -->
+	
+	<div id="footer">&copy;&nbsp;sovaplus.cz</div>	<!-- ./footer -->
+
+	{block scripts}
+	<script src="{$basePath}/js/jquery.js"></script>
+	<script src="{$basePath}/js/netteForms.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</div>	<!-- ./page -->	
+</body>
+</html>
