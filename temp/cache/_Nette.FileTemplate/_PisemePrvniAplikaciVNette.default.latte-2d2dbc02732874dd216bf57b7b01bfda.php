@@ -1,7 +1,17 @@
+<?php //netteCache[01]000412a:2:{s:4:"time";s:21:"0.57065500 1371422137";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:90:"E:\xampp\htdocs\web\sovaplus\sandbox\app\templates\PisemePrvniAplikaciVNette\default.latte";i:2;i:1371422129;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"c0332ac released on 2013-03-08";}}}?><?php
 
-{block content}
+// source file: E:\xampp\htdocs\web\sovaplus\sandbox\app\templates\PisemePrvniAplikaciVNette\default.latte
 
-<h1>Píšeme první aplikaci v Nette</h1>
+?><?php
+// prolog Nette\Latte\Macros\CoreMacros
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '9hb3p7sj7s')
+;
+// prolog Nette\Latte\Macros\UIMacros
+//
+// block content
+//
+if (!function_exists($_l->blocks['content'][] = '_lbe5d1f9bc7b_content')) { function _lbe5d1f9bc7b_content($_l, $_args) { extract($_args)
+?><h1>Píšeme první aplikaci v Nette</h1>
 
 <p>Jak již nadpis napovídá, pokusíme se vytvořit jednoduchou aplikaci s použitím frameworku Nette. Návod je určen pro ty,
 kteří s Nette teprve začínají nebo uvažují o tom, že by vyzkoušeli nějaký ten framework. 
@@ -71,7 +81,7 @@ pracovat a mimo jiné Vám také ušetří mnoho práce.</p>
 <h2>Začínáme</h2>
 <p>Nejprve si na disku vytvoříme novou složku, do které si zkopírujeme adresář sandbox z Nette instalace a do složky libs v sandboxu přidáme adresář dibi z instalace dibi. 
 V editoru si pak pod sandboxem založíme nový projekt, takže budeme mít následující strukturu:<br /></p>
-<img src="{$basePath}/images/app-folders.jpg" height="327" width="180" /> 
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/app-folders.jpg" height="327" width="180" /> 
 
 <p>To, zda jsme postupovali správně, si ověříme zobrazením uvítací stránky Nette v prohlížeči. 
 V závislosti na adresářové struktuře ji budeme mít k dispozici pod:</p>
@@ -79,7 +89,7 @@ V závislosti na adresářové struktuře ji budeme mít k dispozici pod:</p>
 
 <p>nebo v mém případě:</p>
 <pre>http://localhost/web/forum/sandbox/www</pre>
-<img src="{$basePath}/images/nette.jpg" width="510" height="377" title="Nette homepage" />
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/nette.jpg" width="510" height="377" title="Nette homepage" />
 
 <h3>Návrh databáze</h3>
 <p>Nejprve se podíváme na návrh databáze. Pro diskuzní fórum budeme potřebovat tabulku pro jednotlivá témata diskuze. Druhou
@@ -200,11 +210,13 @@ design.
 </p>
 
 <pre>
-<code>&lt;title&gt;<?php echo'{' ?>block title|striptags<?php echo '}' ?>Diskuzní fórum<?php echo '{' ?>/block<?php echo '}' ?>&lt;/title&gt;
+<code>&lt;title&gt;<?php echo'{' ?>block title|striptags<?php echo '}' ?>Diskuzní fórum<?php echo '{' ?>
+/block<?php echo '}' ?>&lt;/title&gt;
 &lt;link rel="stylesheet" media="all" href="<?php echo '{' ?>$basePath<?php echo '}' ?>/css/main.css"&gt;
 ...
   &lt;div id="page"&gt;
-    &lt;div n:foreach="$flashes as $flash" class="flash <?php echo '{' ?>$flash->type<?php echo '}' ?>"&gt;<?php echo '{' ?>$flash->message<?php echo '}' ?>
+    &lt;div n:foreach="$flashes as $flash" class="flash <?php echo '{' ?>$flash->type<?php echo '}' ?>
+"&gt;<?php echo '{' ?>$flash->message<?php echo '}' ?>
   
     &lt;/div&gt;
     <?php echo '{' ?>include #content<?php echo '}' ?>
@@ -232,7 +244,7 @@ a nahradíme ho vlastním.</p>
 
 <p>Po aktualizaci stránky bychom měli vidět následující:<br /><br /></p>
 
-<img src="{$basePath}/images/homepage.jpg" width="510" height="409" title="Forum homepage"/>
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/homepage.jpg" width="510" height="409" title="Forum homepage" />
 
 
 <h3>Založení diskuze</h3>
@@ -250,7 +262,7 @@ class ZalozitNovouDiskuziPresenter extends BasePresenter
 <p>K právě vytvořenému presenteru budeme potřebovat také odpovídající šablonu. Do složky templates si tak přidáme adresář ZalozitNovouDiskuzi, 
 umístíme do něho zatím prázdný soubor default.latte a vyzkoušíme, zda se nám z hlavní stránky po kliknutí na odkaz Založit nové téma zobrazí nová stránka.</p>
 
-<img src="{$basePath}/images/template-orig.jpg" width="198" height="181" title="New template" />
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/template-orig.jpg" width="198" height="181" title="New template" />
 
 <p>
 Při založení nového vlákna se neobejdeme bez formuláře, takže se opět vrátíme k presenteru ZalozitNovouDiskuzi
@@ -277,7 +289,8 @@ class ZalozitNovouDiskuziPresenter extends BasePresenter
 </pre>
 
 <p>Vzhledem k tomu, že problematika formulářů je poměrně obsáhlá, tak více info najdete určitě v <a href="http://doc.nette.org/cs/forms" title="Nette forms">dokumentaci</a>. 
-Do šablony si pak ručně vykreslíme formulář, k čemuž využijeme latte zápis. Všimněte si, že v šabloně volám <?php echo '{' ?>form thread<?php echo '}' ?>,
+Do šablony si pak ručně vykreslíme formulář, k čemuž využijeme latte zápis. Všimněte si, že v šabloně volám <?php echo '{' ?>
+form thread<?php echo '}' ?>,
 kde název komponenty je zapsán malým písmenem.</p>
 
 <pre>
@@ -450,7 +463,8 @@ class HomepagePresenter extends BasePresenter
  &lt;li&gt;
   &lt;p class="thread"&gt;
    &lt;span class="title"&gt;<?php echo '{' ?>$thread->title<?php echo '}' ?>&lt;/span&gt;&lt;span class="count"&gt;&lt;/span&gt;
-   &lt;span class="date"&gt;&lt;/span&gt;&lt;span class="since"&gt;<?php echo '{' ?>$thread->date<?php echo '}' ?>&lt;/span&gt;
+   &lt;span class="date"&gt;&lt;/span&gt;&lt;span class="since"&gt;<?php echo '{' ?>
+$thread->date<?php echo '}' ?>&lt;/span&gt;
   &lt;/p&gt;
  &lt;/li&gt;
 &lt;/ul&gt;
@@ -459,7 +473,7 @@ class HomepagePresenter extends BasePresenter
 
 <p>A toto dostaneme v prohlížeči:</p>
 
-<img src="{$basePath}/images/threads.jpg" width="510" height="541" title="Threads" />
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/threads.jpg" width="510" height="541" title="Threads" />
 
 <p>Vidíme, že výsledek není zdaleka ideální, nicméně počet reakcí, stejně jako datum poslední reakce, si doplníme později s komentáři.
 
@@ -514,4 +528,30 @@ public function fetch($id)
 <p>Pro vložení komentáře si nachystáme metodu insert() do modelové třídy Comment.php.</p>
 
 
-{/block}
+<?php
+}}
+
+//
+// end of blocks
+//
+
+// template extending and snippets support
+
+$_l->extends = empty($template->_extended) && isset($_control) && $_control instanceof Nette\Application\UI\Presenter ? $_control->findLayoutTemplateFile() : NULL; $template->_extended = $_extended = TRUE;
+
+
+if ($_l->extends) {
+	ob_start();
+
+} elseif (!empty($_control->snippetMode)) {
+	return Nette\Latte\Macros\UIMacros::renderSnippets($_control, $_l, get_defined_vars());
+}
+
+//
+// main template
+//
+?>
+
+
+<?php if ($_l->extends) { ob_end_clean(); return Nette\Latte\Macros\CoreMacros::includeTemplate($_l->extends, get_defined_vars(), $template)->render(); }
+call_user_func(reset($_l->blocks['content']), $_l, get_defined_vars()) ; 

@@ -1,0 +1,133 @@
+<?php //netteCache[01]000401a:2:{s:4:"time";s:21:"0.99693100 1370804702";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:79:"E:\xampp\htdocs\web\sovaplus\sandbox\app\templates\StavbaPocitace\default.latte";i:2;i:1370804673;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:30:"c0332ac released on 2013-03-08";}}}?><?php
+
+// source file: E:\xampp\htdocs\web\sovaplus\sandbox\app\templates\StavbaPocitace\default.latte
+
+?><?php
+// prolog Nette\Latte\Macros\CoreMacros
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'hbt32xx2gw')
+;
+// prolog Nette\Latte\Macros\UIMacros
+//
+// block content
+//
+if (!function_exists($_l->blocks['content'][] = '_lb2c7a538c5f_content')) { function _lb2c7a538c5f_content($_l, $_args) { extract($_args)
+?><h1>Stavíme počítač aneb jak na to</h1>
+
+<img src="<?php echo htmlSpecialChars($basePath) ?>/images/zalman.jpg"  width="270" height="179" title="PC" alt="PC" class="right" />
+<p class="text">Jednoho dne mě napadlo, že si zkusím postavit počítač. Možná se ptáte proč, když si mohu počítač
+objednat někde přes e-shop za pár minut s jistotou, že vše bude fungovat a nebudu muset nic řešit.
+Jenže takto to dělám přece pořád. Tak proč nezkusit něco nového? V následujícím textu si ukážeme, jak na to.
+Nejprve nastíním, jak budeme postupovat. Na úvod si povíme něco o konfiguraci a kompatibilitě, pak přistoupíme
+k samotnému sestavení počítače a k jeho zapojení, přičemž se zlehka dotkneme i instalace operačního systému. 
+Takže celý proces si rozdělíme na tři části:<br /><br />
+1. Konfigurace a kompatibilita<br />
+2. Sestavení počítače<br />
+3. Zapojení a instalace operačního systému<br /><br />
+
+Pokud si stále nejste jisti, zda se do toho pustit, tak si dovolím jedno upozornění. <span class="bf">Do stavby počítače se
+nepouštějte,</span> pokud:<br /><br />
+&bull; si myslíte, že všechno víte,<br />
+&bull; věříte, že návody skutečně nepotřebujete,<br />
+&bull; jste pevně přesvědčeni o tom, že co nejde silou, tak půjde ještě větší silou,<br />
+&bull; nečtete,<br />
+&bull; Vás to nezajímá,<br />
+&bull; nemáte čas.<br /><br />
+
+Stavba počítače je něco jako lego, akorát s tím rozdílem, že pokud něco vlastní chybou zničíte, tak si to také
+zaplatíte. Proto k tomu s tímto vědomím taky přistupujte :)</p>
+
+
+<h2>Konfigurace</h2>
+<p class="text">Konfigurace počítače se odvíjí od Vašich požadavků. Pokud nepotřebujete herní mašinu, nemá
+smysl něco takového stavět, protože všechno se následně promítne do ceny takové sestavy. Pro mě je prioritou to,
+aby mě počítač neomezoval v práci a aby mi umožnil si také zahrát nějakou tu hru. Pro představu zde tedy uvedu
+svoji sestavu, i když komponenty jsou aktuální tak pro rok 2011.</p>  
+<table>
+<tr><td>PC skříň</td><td>Zalman MS1000-HS1</td></tr>
+<tr><td>Ventilátor I</td><td>Noctua NF-S12B FLX</td></tr>
+<tr><td>Ventilátor II</td><td>Noctua NF-S12B FLX</td></tr>
+<tr><td>Zdroj</td><td>Seasonic M12II-520 520 W Bronze</td></tr>
+<tr><td>Základní deska</td><td>Gigabyte GA-890XA-UD3</td></tr>
+<tr><td>Procesor</td><td>AMD Phenom II X4 965 Black Edition 3.40 GHz</td></tr>
+<tr><td>Chladič procesoru</td><td>Zalman CNPS10X Quiet</td></tr>
+<tr><td>Grafická karta</td><td>MSI R5850 Twin Frozr II</td></tr>
+<!-- <tr><td>Zvuková karta</td><td>Line6 POD Studio UX1 (USB)</td></tr>-->
+<tr><td>RAM I</td><td>Kingston HyperX 1333 MHz CL7 2x2 GB (KHX1333C7D3K2/4GX)</td></tr>
+<tr><td>RAM II</td><td>Crucial Ballistix Tactical 1600 MHz CL8 2x4 GB (BLT2CP4G3D1608DT1TX0CEU)</td></tr>
+<tr><td>WiFi karta</td><td>Edimax EW-7727ln</td></tr>
+<tr><td>Pevný disk I</td><td>Samsung SpinPoint F3 500 GB (HD502HJ)</td></tr>
+<tr><td>Pevný disk II</td><td>Seagate BARRACUDA 7200.12 1 TB (ST31000528AS)</td></tr>
+<tr><td>Pevný disk SSD</td><td>OCZ Vertex 2 Series 60 GB</td></tr>
+<tr><td>DVD mechanika</td><td>LG GH22LS50 retail</td></tr>
+<tr><td>Čtečka karet</td><td>Apacer AE700</td></tr>
+<tr><td>Rámeček&nbsp;3,5"/5,25"&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Digitus</td></tr>
+<tr><td colspan="5"></td></tr>
+
+</table>
+
+
+<p class="text">
+Cena takovéto sestavy byla 27 tisíc, na první pohled to vypadá dost, ale jen disky stály přes 5 tisíc a později
+byl ještě dokoupen jeden paměťový modul navíc. Z hlediska poměru cena/výkon tam nějaké rezervy samozřejmě jsou jako např. cena PC skříně ke zbytku
+sestavy či ventilátory Noctua, které nepatří mezi běžný standard. Ale v tom to má také svoje kouzlo &#8211; připlatíte si tam, kde chcete.
+Na druhé straně rodičům by stačil levnější počítač, odhadem do 15 tisíc včetně operačního systému a bez dalšího příslušenství. 
+<br />
+Vzhledem k tomu, že se situace v oblasti HW mění poměrně rychle, stejně tak jako ceny, tak pravidelný přehled doporučených sestav vychází
+např. na <a href="http://www.ddworld.cz/pc-a-komponenty/sestavy/">ddworld.cz</a>. 
+</p>
+
+<h2>Kde nakoupit</h2>
+<p class="text">
+Vybrané komponenty můžete objednat v jednom obchodě a nebo jen tak po různu, což byla také moje volba. Osobně spíš
+preferuji nákup v místě bydliště, a to kvůli případné reklamaci, ale záleží, jaké máte možnosti. Pak s nákupem komponentů také může
+souviset licence k operačnímu systému. U Windows 7 se rozlišuje tzv. OEM a krabicová licence. Na OEM licenci máte
+nárok tehdy, pokud u jednoho prodejce objednáte na jednu fakturu základní desku, procesor, paměť, disk, PC skříň a zdroj,
+takže skoro všechno. Jinak potřebujete krabicovou verzi, která je samozřejmě dražší, ale nese s sebou určité výhody, i když
+možná se to dá nějak obejít. U Windows 8 už je to jinak, tam by mělo být možné  zakoupit OEM licenci i bez hardwaru. Píšu to proto, že je dobré si o tom
+zjistit nějaké info a myslet na to.
+</p>
+
+<h2>A co kompatibilita?</h2>
+<p class="text">
+To, jestli Vámi vybrané komponenty k sobě budou pasovat, si musíte zjistit sami. A je dobré to skutečně udělat. Platformu
+máte AMD nebo Intel &#8211; od toho se pak odvíjí výběr procesoru a základní desky. Procesor Intel na desce AMD skutečně fungovat nebude. Pokud máte vybranou desku, tak na stránkách
+výrobce byste třeba měli najít, jaké paměti potřebujete. Stejně tak existuje formát desky mATX a ATX, takže si ověřte, že danou desku
+dostanete do skříně. To samé se týká grafické karty či chladiče procesoru. Pokud si vyberete vyšší chladič, nemusí se Vám do skříně vejít.
+Použití boxovaného chladiče příliš nedoporučuji &#8211; právě takový chladič koupíte přímo s procesorem, ale není to ideální.
+Stejně tak je dobré se podívat na umístění chladiče procesoru a pamětí na základní desce, zda nenastane kolize v případě použití pamětí s vyšším
+chladičem, což se týká především platformy AMD. Jsou to všechno asi dost základní a logické věci, ale uvádím je proto, že to není jen o tom, že
+něco v rychlosti naházíte do košíku a objednáte. Pak, co se týká zdroje, jsou někde stránky, které Vám vypočítají, jak moc výkonný zdroj potřebujete, ale dost často
+bývá minimální požadavek na zdroj uveden přímo u grafické karty a pak záleží, co na tom vše budete provozovat (disky apod.).
+Každopádně u zdroje vsaďte na osvědčené výrobce &#8211; uvedu zde hlavně Seasonic nebo Enermax a nejlépe
+vyberte ten s certifikací 80plus Bronze nebo vyšší. Bude to
+sice o něco dražší, ale tady se šetřit doopravdy nevyplatí.
+</p>
+
+
+<?php
+}}
+
+//
+// end of blocks
+//
+
+// template extending and snippets support
+
+$_l->extends = empty($template->_extended) && isset($_control) && $_control instanceof Nette\Application\UI\Presenter ? $_control->findLayoutTemplateFile() : NULL; $template->_extended = $_extended = TRUE;
+
+
+if ($_l->extends) {
+	ob_start();
+
+} elseif (!empty($_control->snippetMode)) {
+	return Nette\Latte\Macros\UIMacros::renderSnippets($_control, $_l, get_defined_vars());
+}
+
+//
+// main template
+//
+?>
+
+
+<?php if ($_l->extends) { ob_end_clean(); return Nette\Latte\Macros\CoreMacros::includeTemplate($_l->extends, get_defined_vars(), $template)->render(); }
+call_user_func(reset($_l->blocks['content']), $_l, get_defined_vars()) ; 

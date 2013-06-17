@@ -26,26 +26,41 @@
 
 	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
 
-	<div id="header">Enter | Sovaplus.cz</div>	<!-- ./header -->
+	<div id="header">&nbsp;&nbsp;&nbsp; || Sovaplus.cz</div>	<!-- ./header -->
+
+	<div id="main-page">
 
 	<div id="left-column">
 	<div id="leftmenu">
 		<ul>
-		 <li><a href="{$basePath}">Domů</a></li>
-		 <li><a href="{$basePath}/o-mne/">O mně</a></li>
-		 <li><a href="{$basePath}/piseme-prvni-aplikaci-v-nette/">Píšeme první aplikaci v Nette</a></li>
+		 <li><a href="{$basePath}/">Domů</a></li>
 		</ul> 
-		<p>Reference</p>
+		<h2>Web</h2>
 		<ul>
-		 <li><a href="{$basePath}">Blog</a></li>
-		 <li><a href="{$basePath}">Aplikace na správu článků</a></li>
+		 <li><a href="{$basePath}/piseme-prvni-aplikaci-v-nette/">Píšeme první aplikaci v Nette</a></li>
+		 <li><a href="{$basePath}/web-ukazky-prace/">Ukázky práce</a></li>
 		</ul>
+		<h2>DTP</h2>
+		<ul>
+		 <li><a href="{$basePath}/knizni-sazba-v-texu">Knižní sazba v TeXu</a></li>
+		 <li><a href="{$basePath}/latex-ukazky-prace">Ukázky práce</a></li>
+		</ul>
+		<h2>Ostatní</h2>
+		<ul>
+		 <li><a href="{$basePath}/stavba-pocitace/">Stavba počítače</a></li>
+		 <li><a href="{$basePath}/kontakt/">Kontakt</a></li>
+		 <li><a href="{$basePath}/odkazy/">Odkazy</a></li>
+		</ul>
+		
 	</div>	<!-- ./leftmenu -->	
 	</div>	<!-- ./left-column -->
 
 	<div id="middle-page">
 	{include #content}
 	</div>	<!-- /middle-page -->
+	
+	
+	</div> <!-- ./main-page -->
 	
 	<div id="footer">&copy;&nbsp;sovaplus.cz</div>	<!-- ./footer -->
 
